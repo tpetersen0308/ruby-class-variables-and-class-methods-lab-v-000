@@ -29,7 +29,7 @@ class Song
 #  end
 
 def self.artists
-  @@artists.map { |artist| artist unless self.include?(artist) }
+  @@artists.collect { |artist| artist unless self.include?(artist) }
 end
 
   def self.genres
