@@ -28,9 +28,9 @@ class Song
 #    artists
 #  end
 
-def self.artists
-  @@artists.collect { |artist| artist unless self.include?(artist) }
-end
+  def self.artists
+    @@artists.collect { |artist| artist unless self.include?(artist) }
+  end
 
   def self.genres
     genres = []
