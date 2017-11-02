@@ -39,6 +39,7 @@ class Song
     @@genres.each do |genre|
       genres.include?(genre) ? (genres[genre] += 1) : (genres[genre] = 1)
     end
+    genres
   end
 
 end
