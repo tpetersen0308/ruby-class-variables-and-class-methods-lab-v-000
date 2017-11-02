@@ -22,14 +22,10 @@ class Song
     @@count
   end
 
-#  def self.artists
-#    artists = []
-#    @@artists.each { |artist| artists << artist unless artists.include?(artist) }
-#    artists
-#  end
-
   def self.artists
-    @@artists.collect { |artist| artist unless self.include?(artist) }
+    artists = []
+    @@artists.each { |artist| artists << artist unless artists.include?(artist) }
+    artists
   end
 
   def self.genres
