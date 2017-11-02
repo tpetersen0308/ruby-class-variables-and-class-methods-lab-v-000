@@ -22,11 +22,15 @@ class Song
     @@count
   end
 
-  def self.artists
-    artists = []
-    @@artists.each { |artist| artists << artist unless artists.include?(artist) }
-    artists
-  end
+#  def self.artists
+#    artists = []
+#    @@artists.each { |artist| artists << artist unless artists.include?(artist) }
+#    artists
+#  end
+
+def self.artists
+  @@artists.map { |artist| artist unless self.include?(artist) }
+end
 
   def self.genres
     genres = []
